@@ -16,12 +16,7 @@ public class Main {
     private static void insercao() {
         VendedorPersistence vendedorPersistence = new VendedorPersistence();
         VendedorService vendedorService = new VendedorService(vendedorPersistence);
-        Vendedor vendedor = new Vendedor(
-                "002.005.008-56",
-                "Carlos",
-                "Avenida C",
-                "Niterói",
-                "RJ");
+        Vendedor vendedor = new Vendedor("MLB422", "007.003.002-21" ,"Valéria");
 
         vendedorService.salva(vendedor);
     }
@@ -35,13 +30,7 @@ public class Main {
     private static void atualizacao() {
         VendedorPersistence vendedorPersistence = new VendedorPersistence();
         VendedorService vendedorService = new VendedorService(vendedorPersistence);
-        Vendedor vendedor = new Vendedor(
-                "MLB227",
-                "009.005.002-45",
-                "Mario",
-                "Avenida M",
-                "Recife",
-                "PB");
+        Vendedor vendedor = new Vendedor("MLB422", "007.003.002-21" ,"Silvia");
 
         vendedorService.salva(vendedor);
     }
