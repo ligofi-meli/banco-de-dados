@@ -19,6 +19,7 @@ public class VendaPersistence {
         em = JPAUtil.getEntityManager();
     }
 
+    // CREATE
     public void insere(Venda venda) {
         try {
             em.getTransaction().begin();
@@ -29,15 +30,18 @@ public class VendaPersistence {
         }
     }
 
+
+    // READ
     public Venda get(Long id) {
         return em.find(Venda.class, id);
     }
 
     public List<Venda> lista() {
-        TypedQuery<Venda> query = em.createQuery("FROM Venda", Venda.class);
+        TypedQuery<Venda> query = em.createQuery("SELECT v FROM Venda v", Venda.class);
         return query.getResultList();
     }
 
+    // UPDATE
     public void atualiza (Venda venda) {
         em.getTransaction().begin();
         Venda v = em.find(Venda.class, venda.getId());
@@ -45,6 +49,7 @@ public class VendaPersistence {
         em.getTransaction().commit();
     }
 
+    // DELETE
     public void delete(Long id) {
         em.getTransaction().begin();
         Venda v = em.find(Venda.class, id);
@@ -55,14 +60,11 @@ public class VendaPersistence {
     public static void main(String[] args) {
         VendaPersistence vendaPersistence = new VendaPersistence();
         VendedorPersistence vendedorPersistence = new VendedorPersistence();
-        Vendedor vendedor = vendedorPersistence.get("MLB470");
+        //Vendedor vendedor = vendedorPersistence.get("MLB077");
+        Vendedor vendedor = vendedorPersistence.get("MLB854");
 
-        vendaPersistence.insere(new Venda(LocalDate.now(), new BigDecimal(1000), FormaPagamento.A_PRAZO, vendedor));
+        //vendaPersistence.insere(new Venda(LocalDate.now(), new BigDecimal(89889), FormaPagamento.A_PRAZO, vendedor));
+        //vendaPersistence.insere(new Venda(LocalDate.now(), new BigDecimal(15000), FormaPagamento.A_PRAZO, vendedor));
+        vendaPersistence.insere(new Venda(LocalDate.now(), new BigDecimal(15000), FormaPagamento.A_VISTA, vendedor));
     }
-
-
-
-
-
-
 }

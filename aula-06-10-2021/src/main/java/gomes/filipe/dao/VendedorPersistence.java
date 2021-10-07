@@ -33,7 +33,7 @@ public class VendedorPersistence {
 
     // READ
     public List<Vendedor> lista() {
-        TypedQuery<Vendedor> query = em.createQuery("FROM Vendedor", Vendedor.class);
+        TypedQuery<Vendedor> query = em.createQuery("SELECT v FROM Vendedor v", Vendedor.class);
         return query.getResultList();
     }
 
