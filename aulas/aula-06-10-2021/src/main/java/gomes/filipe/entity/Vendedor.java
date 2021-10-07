@@ -31,6 +31,11 @@ public class Vendedor {
         this.nome = nome;
     }
 
+    public Vendedor(String cpf, String nome) {
+        this.cpf = cpf;
+        this.nome = nome;
+    }
+
     public Vendedor(String codigo, String nome, List<Endereco> enderecos) {
         this.codigo = codigo;
         this.nome = nome;

@@ -16,7 +16,7 @@ public class Main {
     private static void insercao() {
         VendedorPersistence vendedorPersistence = new VendedorPersistence();
         VendedorService vendedorService = new VendedorService(vendedorPersistence);
-        Vendedor vendedor = new Vendedor("MLB422", "007.003.002-21" ,"Valéria");
+        Vendedor vendedor = new Vendedor("008.003.001-83" ,"Letícia");
 
         vendedorService.salva(vendedor);
     }
