@@ -5,7 +5,8 @@ Esse repositório é para eu datar meus estudos utilizando o framework Spring Bo
 ###  Programas Utilizados:
 
 - [Pgadmin4](https://www.pgadmin.org/)
-- [Intellij Idea](https://www.jetbrains.com/pt-br/idea/)
+- [MySQL Workbench](https://www.mysql.com/downloads/)
+- [Eclipse](https://www.eclipse.org/downloads/)
 
 ### Framework:
 [Spring Boot](https://spring.io/projects/spring-boot)
@@ -16,7 +17,9 @@ Esse repositório é para eu datar meus estudos utilizando o framework Spring Bo
 - [Docker](https://www.docker.com/)
 - [iTerm2](https://iterm2.com/)
 
+
 ### Banco de dados no docker:
 
 - [PostgreSQL 14](https://hub.docker.com/_/postgres)
+- [MySQL](https://hub.docker.com/_/MySQL)
 
