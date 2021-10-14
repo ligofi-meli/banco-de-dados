@@ -66,7 +66,19 @@ public class VendedorPersistence {
 			}
 		}
 	}
+	
+	
+	public List<Vendedor> listagem() {
+		List<Vendedor> vendedoresExistentes = new ArrayList<>();
 
+		List<String> registros = retornaRegistros();
+		registros.forEach(registro -> {
+			Vendedor vendedor = converte(registro);
+			vendedoresExistentes.add(vendedor);
+		});
+		return vendedoresExistentes;
+
+	}
 
 	private Vendedor converte(String registro) {
 		String[] campos = registro.split(";");
@@ -94,17 +106,5 @@ public class VendedorPersistence {
 			throw new PersistenceException("Erro ao retornar os registros"); 
 		}
 		return registros;
-	}
-
-	public List<Vendedor> listagem() {
-		List<Vendedor> vendedoresExistentes = new ArrayList<>();
-
-		List<String> registros = retornaRegistros();
-		registros.forEach(registro -> {
-			Vendedor vendedor = converte(registro);
-			vendedoresExistentes.add(vendedor);
-		});
-		return vendedoresExistentes;
-
 	}
 }
