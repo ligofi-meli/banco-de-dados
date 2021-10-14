@@ -1,6 +1,8 @@
 package gomes.filipe.dto;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -105,6 +107,37 @@ public class AnuncioDTO {
 		}
 
 	}
+	
+	public static List<AnuncioDTO> converte(List<Anuncio> anuncios) {
+		List<AnuncioDTO> listaDeAnunciosDTO = new ArrayList<>();
+		for (Anuncio anuncio: anuncios) {
+			if (anuncio.getVendedor() != null) {
+				listaDeAnunciosDTO.add(new AnuncioDTO(anuncio.getCodigo(), anuncio.getTitulo(), anuncio.getPreco(), anuncio.getQuantidade(), VendedorDTO.converte(anuncio.getVendedor())));
+			} else {
+				listaDeAnunciosDTO.add(new AnuncioDTO(anuncio.getCodigo(), anuncio.getTitulo(), anuncio.getPreco(), anuncio.getQuantidade()));
+			}
+		}
+		return listaDeAnunciosDTO;
+	}
+	
+	
+	public static AnuncioDTO converte(Anuncio anuncio) {
+		if (anuncio.getVendedor() != null) {
+			VendedorDTO vendedorDTO = VendedorDTO.converte(anuncio.getVendedor());
+			return new AnuncioDTO(anuncio.getCodigo(), anuncio.getTitulo(), anuncio.getPreco(), anuncio.getQuantidade(), vendedorDTO);
+		} else {
+			return new AnuncioDTO(anuncio.getCodigo(), anuncio.getTitulo(), anuncio.getPreco(), anuncio.getQuantidade());
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 }
