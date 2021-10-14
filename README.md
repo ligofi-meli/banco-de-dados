@@ -1,6 +1,6 @@
 # Spring Boot com banco de dados
 
-Esse repositório é para eu datar meus estudos utilizando o framework Spring Boot e o banco de dados PostgreSQL.
+Esse repositório é para eu datar meus estudos utilizando o framework Spring Boot e os bancos de dados PostgreSQL 14 e MySQL 8.0.26.
 
 ###  Programas Utilizados:
 
