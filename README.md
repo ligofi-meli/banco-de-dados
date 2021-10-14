@@ -21,5 +21,5 @@ Esse repositório é para eu datar meus estudos utilizando o framework Spring Bo
 ### Banco de dados no docker:
 
 - [PostgreSQL 14](https://hub.docker.com/_/postgres)
-- [MySQL](https://hub.docker.com/_/MySQL)
+- [MySQL 8.0.26](https://hub.docker.com/_/MySQL)
 
