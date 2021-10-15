@@ -9,7 +9,7 @@ public class DataBase {
     private static Connection connection;
 
     public static Connection getConnection() throws SQLException {
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project", "postgres", "89169118");
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "123456");
         return connection;
     }
 }
